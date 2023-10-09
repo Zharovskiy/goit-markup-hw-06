@@ -131,12 +131,18 @@ img {
     }
     
     .heder-menu-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 24px;
         height: 24px;
         padding: 16px 0;
         border: none;
         background-color: transparent;
-        border: 1px solid black;
+    }
+
+    .heder-menu-icon {
+        fill: #2F2F37;
     }
 
     /* Section 2 */
