@@ -73,6 +73,7 @@ img {
 
 .header .container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -124,7 +125,8 @@ img {
         }
     
     /* Header */
-    .header-menu, .address-list {
+    .header-menu,
+    .address {
         display: none;
     }
     
@@ -136,6 +138,7 @@ img {
         background-color: transparent;
         border: 1px solid black;
     }
+
     /* Section 2 */
     .advantages-cont-icon {
         display: none;
@@ -159,12 +162,10 @@ img {
 /* T A B L E T - 7 6 8 px ------- L A P T O P - 1 1 5 8 PX ===================*/
 @media screen and (min-width: 321px) {
     /* Menu header */
-.header .container {
+.header-menu-address {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-}
-
-.header-menu {
     flex-grow: 1;
 }
 
@@ -212,7 +213,6 @@ img {
 
 .address-list {
     display: flex;
-    gap: 40px;
 }
 
 .address-link {
@@ -243,7 +243,9 @@ img {
 
     /* Contacts header */
     .address-list {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         font-size: 12px;
     }
 
@@ -292,6 +294,11 @@ img {
     .logo-link {
         margin: auto 76px auto 0px; 
     } 
+    
+    .address-list {
+        display: flex;
+        gap: 40px;
+    }
     
     /* Section 2 */
     .section-advantages {
