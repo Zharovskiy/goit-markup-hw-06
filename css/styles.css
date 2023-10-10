@@ -77,6 +77,10 @@ img {
     justify-content: space-between;
 }
 
+.container { 
+    max-width: 320px;
+    }
+
 /* Logo */
 .logo-link {
     font-family: Raleway, sans-serif;
@@ -98,6 +102,103 @@ img {
     color: #F4F4FD;
 }
 
+.header-menu-address {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    padding: 72px 16px 40px 16px;
+    /* opacity: 0;
+    visibility: hidden;
+    pointer-events: none; */
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-menu-address.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.header-menu {
+    margin-bottom: 168px;
+}
+
+.header-menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.header-menu-link {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #434455;
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+   
+.header-menu-link:hover, 
+.header-menu-link:focus {
+    color: #404BBF;
+}
+
+.header-menu-activ {
+    color: #404bbf;
+}
+
+/* Contacts header */
+.address {
+    font-style: normal;
+}
+
+.address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.address-link {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-link:hover,
+.address-link:focus {
+    color: #404BBF;
+}
+
+.address-tel {
+    order: -1;
+}
+
+.address-tel .address-link {
+    color: #4D5AE5;
+}
+
+/* Burger btn */
+.heder-menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 16px 0;
+    border: none;
+    background-color: transparent;
+ }
+   
+.heder-menu-icon {
+     fill: #2F2F37;
+}    
 
 
 /* Section 2 */
@@ -118,51 +219,21 @@ img {
     width: 100%;
 }
 
-/* M O B I L E - 3 2 0 px ===================================================*/
-@media screen and (max-width: 320px) {
-    .container { 
-        max-width: 320px;
-        }
-    
-    /* Header */
-    .header-menu,
-    .address {
-        display: none;
-    }
-    
-    .heder-menu-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 24px;
-        height: 24px;
-        padding: 16px 0;
-        border: none;
-        background-color: transparent;
-    }
+.advantages-cont-icon {
+    display: none;
+}
 
-    .heder-menu-icon {
-        fill: #2F2F37;
-    }
+.advantages-list-items .title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    text-align: center;
+}
 
-    /* Section 2 */
-    .advantages-cont-icon {
-        display: none;
-    }
-    
-    .advantages-list-items .title {
-        font-size: 36px;
-        font-weight: 700;
-        letter-spacing: 0.02em;
-        margin-bottom: 8px;
-        text-align: center;
-    }
-
-    .text {
-        font-weight: 500;
-        line-height: 1.5;
-    }
-    
+.text {
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 /* T A B L E T - 7 6 8 px ------- L A P T O P - 1 1 5 8 PX ===================*/
