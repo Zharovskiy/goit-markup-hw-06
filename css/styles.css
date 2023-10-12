@@ -362,8 +362,8 @@ img {
 
 /* Section 4 */
 .section-portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .portfolio-title {
@@ -375,18 +375,17 @@ img {
 
 .portfolio-list {
     display: flex;
-    gap: 48px 24px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 48px;
 }
 
 .portfolio-list-items {
     display: flex;
-    width: calc(100%-24px*2)/3;
+    width: 100%;
     flex-direction: column;
     align-items: stretch;
     background-color: #fff;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .box-overlay {
@@ -431,30 +430,36 @@ img {
 .footer {
     background-color: #2E2F42;
     color: #F4F4FD;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .footer-content {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
 }
 
 .footer-logo {
-    margin-right: 120px;
+    margin-bottom: 72px;
 }
 
 .footer .logo-link {
+    display: flex;
+    justify-content: center;
     margin-bottom: 16px;
-    display: inline-block;
 }
 
 .footer .text {
-    max-width: 264px;
+    max-width: 288px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 .footer-networks {
-    margin-right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 72px;
 }
 
 .text-social-networks {
@@ -497,12 +502,16 @@ img {
 }
 
 .newsletter {
-    margin: 0 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .newsletter-form {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
 .input {
@@ -511,10 +520,11 @@ img {
     letter-spacing: 0.04em;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     color: #ffffff;
-    width: 264px;
+    width: 288px;
     height: 40px;
     padding: 8px 16px;
     border: 1px solid #FFF;
+    opacity: 0.3;
     border-radius: 4px;
     flex-shrink: 0;
     background-color: transparent;
@@ -794,6 +804,10 @@ input[type="checkbox"]:checked + label > span {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+
+
+
 /* T A B L E T */
 @media screen and (min-width: 768px) {
 
@@ -907,7 +921,7 @@ input[type="checkbox"]:checked + label > span {
 }   
 
 .advantages-list-items {
-    width: calc((100% - 24px) / 2);
+    width: calc((100% - 24px)/2);
 }
 
 .advantages-list-items > .title {
@@ -926,7 +940,64 @@ input[type="checkbox"]:checked + label > span {
     flex-wrap: wrap;
 }
 
+/* Section 4 */
+.portfolio-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
 }
+
+.portfolio-list-items {
+    width: calc((100% - 24px)/2);
+}
+
+/* Footer */
+.footer .container {
+    padding-left: 108px;
+    padding-right: 108px;
+}
+
+.footer-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    margin-right: 24px;
+}
+
+.footer .logo-link {
+    display: block;
+}
+
+.footer .text {
+    max-width: 264px;
+}
+
+.footer-networks {
+    align-items: flex-start;
+}
+
+.newsletter {
+    align-items: flex-start;
+}
+
+.newsletter-form {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.input {
+    width: 264px;
+}
+
+}
+
+
+
+
 
 /* L A P T O P - 1 1 5 8 px =================================================*/
 @media screen and (min-width: 1158px) {
@@ -1009,6 +1080,44 @@ input[type="checkbox"]:checked + label > span {
 
 .team-list {
     flex-wrap: nowrap;
+}
+
+/* Section 4 */
+.portfolio-list {
+    gap: 48px 24px;
+}
+
+.portfolio-list-items {
+    width: calc((100% - 24px * 2)/3);
+}
+
+/* Footer */
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.footer .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer-content {
+    flex-wrap: nowrap;
+    align-items: baseline;
+}
+
+.footer-logo {
+    margin: 0 120px 0 0;
+}
+
+.footer-networks {
+    margin-bottom: 0;
+}
+
+.newsletter {
+    align-items: flex-start;
+    margin: 0 0 0 auto;
 }
 
 }
