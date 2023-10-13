@@ -1021,8 +1021,10 @@ input[type="checkbox"]:checked + label > span:first-child {
     flex-wrap: wrap;
 }
 
-.footer .container {
-    width: 584px;
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .footer .container {
+        width: 584px;
+    }
 }
 
 .footer-logo {
@@ -1183,11 +1185,6 @@ input[type="checkbox"]:checked + label > span:first-child {
 .footer {
     padding-top: 100px;
     padding-bottom: 100px;
-}
-
-.footer .container {
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .footer-content {
