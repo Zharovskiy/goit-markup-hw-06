@@ -24,6 +24,10 @@ p,h1,h2,h3,h4,h5,h6 {
     margin-bottom: 0px; 
 }
 
+h3 {
+    font-weight: 500;
+}
+
 ul, ol {
 	list-style-type: none;
     margin-top: 0px;
@@ -87,8 +91,7 @@ img {
     text-transform: uppercase;
     color: #4D5AE5;
     display: block;
-    margin: auto 120px auto 0px;
-    
+    margin: auto 0;    
 }
 
 .logo-black {
@@ -372,20 +375,29 @@ img {
 }
 
 .advantages-list-items > .title {
-    font-size: 36px;
-    font-weight: 700;
     letter-spacing: 0.02em;
     text-align: center;
+}
+
+.advantages-list-items > .text {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 .title {
     margin-bottom: 8px;
 }
 
-.advantages-list-items > .text {
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+@media screen and (max-width: 1157px) {
+    .advantages-list-items > .title {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .advantages-list-items > .text {
+        font-size: 16px;
+        font-weight: 500;
+    }
 }
 
 /* Section 3 */
@@ -915,6 +927,11 @@ input[type="checkbox"]:checked + label > span:first-child {
     max-width: 768px;
 }
 
+/* Logo */
+.header-menu .logo-link {
+    margin-right: 120px;
+}
+
 /* Menu header */
 .header-menu-nav {
     display: flex;
@@ -999,14 +1016,13 @@ input[type="checkbox"]:checked + label > span:first-child {
 }
 
 /* Footer */
-.footer .container {
-    padding-left: 108px;
-    padding-right: 108px;
-}
-
 .footer-content {
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.footer .container {
+    width: 584px;
 }
 
 .footer-logo {
@@ -1062,8 +1078,8 @@ input[type="checkbox"]:checked + label > span:first-child {
 }
 
 /* Logo */
-.logo-link {
-    margin: auto 76px auto 0px; 
+.header-menu .logo-link {
+    margin-right: 76px;
 } 
 
 /* Contacts header */
@@ -1137,7 +1153,6 @@ input[type="checkbox"]:checked + label > span:first-child {
 
 .advantages-list-items > .title {
     font-size: 20px;
-    font-weight: 500;
 }
 
 /* Section 3 */
