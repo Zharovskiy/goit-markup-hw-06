@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable; /* Фікс стрибка ширини сторінки при відкритті модалки */
 }
 
 body {
@@ -207,7 +208,6 @@ img {
   height: 100%;
   top: 0;
   left: 0;
-  overflow: auto;
   background-color: white;
   padding: 72px 16px 40px 16px;
   z-index: 1;
@@ -699,7 +699,6 @@ img {
   position: fixed;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(46, 47, 66, 0.4);
   top: 0;
   left: 0;
