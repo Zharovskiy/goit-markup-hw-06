@@ -6,13 +6,15 @@ const openMenuBtn = document.querySelector(".heder-menu-btn");
 const closeMenuBtn = document.querySelector(".menu-close-btn");
 const mobileMenu = document.querySelector(".header-mob-menu");
 
+const scrollBarWidth = window.innerWidth - document.documentElement.scrollWidth;
+
 openModalBtn.addEventListener("click", onOpenModalWindow);
 openMenuBtn.addEventListener("click", onOpenMobileMenu);
 
 function onOpenModalWindow() {
   backdrop.classList.add("is-open");
   document.body.style.overflow = "hidden";
-  backdrop.style.overflow = "auto";
+  document.body.style.paddingRight = `${scrollBarWidth}px`;
   backdrop.addEventListener("click", onBackdrop);
   window.addEventListener("keydown", onEsc);
   closeModalBtn.addEventListener("click", onCloseModalWindow);
@@ -20,8 +22,10 @@ function onOpenModalWindow() {
 
 function onCloseModalWindow() {
   backdrop.classList.remove("is-open");
-  document.body.style.overflow = "auto";
-  backdrop.style.overflow = "hidden";
+  setTimeout(() => {
+    document.body.style.overflow = "auto";
+    document.body.style.paddingRight = "0px";
+  }, 300);
   backdrop.removeEventListener("click", onBackdrop);
   window.removeEventListener("keydown", onEsc);
   closeModalBtn.removeEventListener("click", onCloseModalWindow);

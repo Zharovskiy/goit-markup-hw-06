@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  scrollbar-gutter: stable; /* Фікс стрибка ширини сторінки при відкритті модалки */
+  /* scrollbar-gutter: stable; */
 }
 
 body {
@@ -705,6 +705,8 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  overflow-y: auto;
+  overflow-x: hidden;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -716,15 +718,20 @@ img {
 }
 
 .modal {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+.modal-content {
+  position: relative;
   padding: 72px 16px 24px 16px;
   background-color: #fcfcfc;
   border-radius: 4px;
   width: 288px;
   min-height: 623px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1066,7 +1073,7 @@ input[type="checkbox"]:checked + label > span:first-child {
   }
 
   /* Modal window */
-  .modal {
+  .modal-content {
     padding: 72px 24px 24px 24px;
     width: 408px;
     min-height: 584px;
