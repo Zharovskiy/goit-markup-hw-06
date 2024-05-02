@@ -1,34 +1,34 @@
 const orderServiceBtn = document.querySelector(".hero-image-button");
 const closeModalBtn = document.querySelector(".modal-btn");
 const modalWindow = document.querySelector(".backdrop");
-const modalWindowContent = document.querySelector(".modal");
 
-const burgerMenu = document.querySelector(".heder-menu-btn");
-const closeMobileMenu = document.querySelector(".menu-close-btn");
-// const mobileMenu = document.querySelector(".header-mob-menu");
+const burgerMenuBtn = document.querySelector(".heder-menu-btn");
+const closeMobileBtn = document.querySelector(".menu-close-btn");
+const mobileMenu = document.querySelector(".header-mob-menu");
 
-orderServiceBtn.addEventListener("click", openCloseModalWindow);
-burgerMenu.addEventListener("click", openCloseMobileMenu);
+orderServiceBtn.addEventListener("click", openModalWindow);
+burgerMenuBtn.addEventListener("click", openMobileMenu);
 
-function openCloseModalWindow() {
-  modalWindow.classList.toggle("is-open");
-  if (modalWindow.classList.contains("is-open")) {
-    closeModalBtn.addEventListener("click", openCloseModalWindow);
-    document.body.style.overflow = "hidden";
-    // modalWindow.style.overflow = "auto";
-  } else {
-    closeModalBtn.removeEventListener("click", openCloseModalWindow);
-    document.body.style.overflow = "auto";
-  }
+function openModalWindow() {
+  modalWindow.classList.add("is-open");
+  closeModalBtn.addEventListener("click", closeModalWindow);
+  document.body.style.overflow = "hidden";
 }
 
-function openCloseMobileMenu() {
-  mobileMenu.classList.toggle("is-open");
-  if (mobileMenu.classList.contains("is-open")) {
-    closeMobileMenu.addEventListener("click", openCloseMobileMenu);
-    document.body.style.overflow = "hidden";
-  } else {
-    closeMobileMenu.removeEventListener("click", openCloseMobileMenu);
-    document.body.style.overflow = "auto";
-  }
+function closeModalWindow() {
+  modalWindow.classList.remove("is-open");
+  closeModalBtn.removeEventListener("click", closeModalWindow);
+  document.body.style.overflow = "auto";
+}
+
+function openMobileMenu() {
+  mobileMenu.classList.add("is-open");
+  closeMobileBtn.addEventListener("click", closeMobileMenu);
+  document.body.style.overflow = "hidden";
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove("is-open");
+  closeMobileBtn.removeEventListener("click", closeMobileMenu);
+  document.body.style.overflow = "auto";
 }
